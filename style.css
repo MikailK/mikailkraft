@@ -37,12 +37,22 @@ li {
   margin-right: 8px;
 }
 
+a {
+  text-decoration: none;
+  color: #da0083 ;
+}
+
 .flex-container {
   align-items: flex-start;
 	align-content: flex-start;
 	display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 
