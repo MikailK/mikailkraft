@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Jost:ital,wght@0,400;0,500;1,300;1,400&family=PT+Serif&family=Varela+Round&display=swap');
+
+html {
+    font-family: 'Varela Round', 'Segoe UI', sans-serif;
+    font-weight: normal;
+}
+
+
+body {
+  color: black;
+  background-color: #c2fbff;
+}
+
+h1 {
+  margin:  0px;
+  font-size: 2.3em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+ul {
+  list-style: none;
+  overflow: hidden;
+  margin: 12px;
+  padding: 0px;
+}
+
+li {
+  float: left;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.flex-container {
+  align-items: flex-start;
+	align-content: flex-start;
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.card {
+  padding: 12px;
+  margin: 12px;
+  max-width: 35rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow:  5px 5px black;
+  transition: .5s;
+  align-self: flex-start;
+  flex-direction: row;
+}
+.card-title {
+  background-color: #ffe3f0;
+}
+
+.card-caption {
+  max-width: 25rem;
+}
+
+.card-caption p{
+  margin: 0px;
+}
+
+.card-twitter {
+  max-width: 35rem;
+}
+.title {
+  font-family: 'PT Serif';
+  margin-left: 12px;
+}
+
+#social {
+position: sticky;
+position: -webkit-sticky;
+top: 12px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.fa-facebook-square {
+  color: black;
+}
+
+.fa-twitter-square {
+  color: black;
+}
+
+.fa-envelope-square {
+  color: black;
+}
+
+@media only screen and (max-width: 1500px) {
+
+    #social {
+      position: static;
+    }
+
+}
