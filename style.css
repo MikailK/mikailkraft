@@ -43,12 +43,19 @@ a {
 }
 
 .flex-container {
-  align-items: flex-start;
-	align-content: flex-start;
 	display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  max-width: 30rem;
+}
+
 
 .break {
   flex-basis: 100%;
@@ -59,24 +66,36 @@ a {
 .card {
   padding: 12px;
   margin: 12px;
-  max-width: 35rem;
+  max-width: 25rem;
   background-color: white;
   border-radius: 5px;
   box-shadow:  5px 5px black;
   transition: .5s;
   align-self: flex-start;
   flex-direction: row;
+  justify-content: center;
+
 }
 .card-title {
   background-color: #ffe3f0;
 }
 
 .card-caption {
-  max-width: 25rem;
+  max-width: 30rem;
 }
 
-.card-caption p{
+.card-caption p {
   margin: 0px;
+}
+
+.bubbles p {
+  display: inline-block;
+  font-size: .9em;
+  background-color: #ffaada;
+  padding: 8px;
+  border-radius: 16px;
+  margin-right: 4px;
+  margin-top: 0px;
 }
 
 .card-twitter {
@@ -109,10 +128,22 @@ top: 12px;
   color: black;
 }
 
+.fa-linkedin {
+  color: black;
+}
+
 @media only screen and (max-width: 1500px) {
 
     #social {
       position: static;
     }
 
+}
+
+@media only screen and (min-width: 1400px) {
+
+  #social {
+    position: fixed;
+    right: 0px;
+  }
 }
