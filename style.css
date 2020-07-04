@@ -10,6 +10,9 @@ html {
   --link: #da0083;
   --card-title-background: #ffe3f0;
   --box-shadow: 5px 5px black;
+  --font: 'Varela Round';
+  --font-weight: 600;
+  --font-size-h2: 1.8em;
 }
 
 [data-theme="dark"] {
@@ -17,7 +20,9 @@ html {
   --background: #fafafa;
   --box-shadow: 5px 5px 12px #ddd;
   --card-title-background: #fff;
-
+  --font: 'Montserrat';
+  --font-weight: 600;
+  --font-size-h2: 1.6em;
 }
 
 body {
@@ -28,10 +33,13 @@ body {
 h1 {
   margin:  0px;
   font-size: 2.3em;
+  font-family: var(--font);
+  font-weight: var(--font-weight);
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: var(--font-size-h2);
+  font-family: var(--font);
 }
 
 p {
@@ -152,7 +160,7 @@ a {
 }
 
 .portfolio-card h2 {
-  font-family: 'PT Serif';
+  font-family: var(--font);
   margin: 0px;
 }
 
