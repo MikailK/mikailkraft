@@ -6,9 +6,25 @@ html {
 }
 
 
+:root {
+  --text: #000;
+  --background: #c2fbff;
+  --link: #da0083;
+  --card-title-background: #ffe3f0;
+  --box-shadow: 5px 5px black;
+}
+
+[data-theme="dark"] {
+  --text: #000;
+  --background: #fafafa;
+  --box-shadow: 5px 5px 12px #ddd;
+  --card-title-background: #fff;
+
+}
+
 body {
-  color: black;
-  background-color: #c2fbff;
+  color: var(--text);
+  background-color: var(--background);
 }
 
 h1 {
@@ -39,7 +55,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #da0083 ;
+  color: var(--link) ;
 }
 
 .flex-container {
@@ -69,7 +85,7 @@ a {
   max-width: 25rem;
   background-color: white;
   border-radius: 5px;
-  box-shadow:  5px 5px black;
+  box-shadow:  var(--box-shadow);
   transition: .5s;
   align-self: flex-start;
   flex-direction: row;
@@ -77,7 +93,7 @@ a {
 
 }
 .card-title {
-  background-color: #ffe3f0;
+  background-color: var(--card-title-background);
 }
 
 .card-caption {
@@ -93,7 +109,7 @@ a {
   max-width: 26.5rem;
   height: 10rem;
   border-radius: 5px;
-  box-shadow:  5px 5px black;
+  box-shadow:  var(--box-shadow);
   transition: .5s;
   margin: 12px;
 }
@@ -130,7 +146,7 @@ a {
   max-width: 25.4rem;
   margin: 12px;
   height: 3rem;
-  box-shadow: 5px 5px black;
+  box-shadow: var(--box-shadow);
   border-radius: 5px;
   padding-left: 20px;
   padding-top: 5px;
@@ -186,6 +202,70 @@ top: 12px;
   color: black;
 }
 
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 25px;
+  position: relative;
+  width: 49px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: var(--link);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+
+}
+
+.slider:before {
+  bottom: 4px;
+  content: "";
+  height: 17px;
+  width: 17px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  left: 4px;
+  position: absolute;
+  transition: .3s;
+
+}
+
+input:checked + .slider {
+  background-color: #ddd;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.slider.round {
+  border-radius: 34px;
+
+}
+
+.slider.round:before {
+  border-radius: 50%;
+
+}
+
+
+
 @media only screen and (max-width: 1500px) {
 
     #social {
@@ -222,7 +302,7 @@ top: 12px;
 
   }
 
-  .portfolio-item h2 { 
+  .portfolio-item h2 {
     display: none;
   }
 
