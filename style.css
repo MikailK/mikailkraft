@@ -162,6 +162,7 @@ a {
 .portfolio-card h2 {
   font-family: var(--font);
   margin: 0px;
+  margin-top: 5px;
 }
 
 .bubbles p {
